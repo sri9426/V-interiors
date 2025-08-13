@@ -2,7 +2,7 @@
 import React from 'react'
 
 export default function WhatsAppButton({
-  phone = '919502405158', // ← your number in E.164 format (country code + number, no +, spaces, or dashes)
+  phone = '918639847395', // ← your number in E.164 format (country code + number, no +, spaces, or dashes)
   text = 'Hi! I’m interested in an interior design consultation.',
   floating = true
 }) {
