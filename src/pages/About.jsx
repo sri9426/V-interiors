@@ -16,7 +16,7 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
         <div className="absolute bottom-8 left-6 sm:left-10 max-w-2xl text-white">
           <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-xs font-medium backdrop-blur">
-            V-Interior Studio
+            V Interior Studio
           </span>
           <h1 className="mt-3 text-3xl font-semibold sm:text-5xl">
             Spaces that feel natural—built to live in.
@@ -109,19 +109,19 @@ export default function About() {
           {[
             {
               name: "Vinay",
-              role: "Principal Designer",
+              role: "Principal Designer/ Execution",
               img: "images/Vinay.jpg",
             },
-            {
-              name: "Srikanth ",
-              role: "Project Architect",
-              img: "images/sri_02.png",
-            },
-            {
-              name: "Rajesh ",
-              role: "Stylist & Procurement",
-              img: "images/Rajesh.jpg",
-            },
+            // {
+            //   name: "Srikanth ",
+            //   role: "Project Architect",
+            //   img: "images/sri_02.png",
+            // },
+            // {
+            //   name: "Rajesh ",
+            //   role: "Stylist & Procurement",
+            //   img: "images/Rajesh.jpg",
+            // },
           ].map((m) => (
             <div key={m.name} className="flex items-center gap-4 rounded-2xl border p-4">
               <img

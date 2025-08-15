@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import WhatsAppButton from './components/WatsAppButton.jsx'
 import ScrollToTop from './pages/ScrollToTop.jsx'
+import WhatsappCircleButton from './components/WatsappCircleButton.jsx'
 
 const Home = lazy(() => import('./pages/Home.jsx'))
 const Projects = lazy(() => import('./pages/Projects.jsx'))
@@ -16,6 +17,7 @@ export default function App(){
     <div className="min-h-screen flex flex-col">
       <Navbar />
         <ScrollToTop />
+        
       <Suspense fallback={<div className="p-8">Loading…</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -24,9 +26,18 @@ export default function App(){
           <Route path="/contact" element={<Contact />} />
           <Route path="/book" element={<Book />} />
         </Routes>
+       
       </Suspense>
+       <div className="md:hidden">
+  <WhatsappCircleButton />
+</div>
+
+{/* Desktop: pill with text */}
+<div className="hidden md:block">
+  <WhatsAppButton />
+</div>
       <Footer />
-      <WhatsAppButton />
+      
     </div>
   )
 }

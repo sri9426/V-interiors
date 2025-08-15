@@ -64,7 +64,7 @@ export default function Contact() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
           <div className="relative z-10 p-6 sm:p-8 text-white">
             <span className="inline-flex rounded-full bg-white/15 px-3 py-1 text-xs font-medium backdrop-blur">
-              V-Interior
+              V Interior
             </span>
             <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">
               Let’s shape your space.
@@ -75,7 +75,7 @@ export default function Contact() {
             <div className="mt-6 grid gap-2 text-sm text-white/90">
               <div>📍 Shankarpally</div>
               <div>📞 +91 863-984-7395</div>
-              <div>✉️ V-Interior@gmail.com</div>
+              <div>✉️ Vinteriors31@gmail.com</div>
             </div>
           </div>
         </aside>
