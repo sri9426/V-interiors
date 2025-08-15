@@ -7,7 +7,7 @@ export default function Footer(){
       <div className="max-w-7xl mx-auto px-4 py-8 text-sm grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {/* Brand */}
         <div>
-          <div className="font-semibold">V Interior</div>
+          <div className="font-semibold">V Interior's</div>
           <p className="text-gray-600 mt-2">
             Bespoke interior design, renovations, and styling.
           </p>
