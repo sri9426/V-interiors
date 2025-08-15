@@ -19,7 +19,7 @@ export default function Navbar() {
           <span className="sr-only md:not-sr-only md:inline font-semibold text-xl tracking-tight">V Interior's</span>
         </Link>
 
-        <nav className="flex gap-6 text-sm">
+        {/* <nav className="flex gap-6 text-base">
           {['/', '/projects', '/about', '/contact', '/book'].map((path, i) => {
             const label = ['Home', 'Projects', 'About', 'Contact', 'Book'][i]
             return (
@@ -34,7 +34,35 @@ export default function Navbar() {
               </NavLink>
             )
           })}
-        </nav>
+        </nav> */}
+
+        <nav className="flex gap-6 text-sm sm:text-base">
+  {['/', '/projects', '/about', '/contact', '/book'].map((path, i) => {
+    const label = ['Home', 'Projects', 'About', 'Contact', 'Book'][i]
+    return (
+      <NavLink
+        key={path}
+        to={path}
+        className={({ isActive }) =>
+          [
+            // base
+            "relative inline-block py-1 text-gray-800 hover:text-gray-900 group",
+            // animated emerald underline (pseudo-element)
+            "after:content-[''] after:absolute after:left-0 after:-bottom-0.5",
+            "after:h-[2px] after:w-full after:bg-emerald-500",
+            "after:origin-left after:scale-x-0 after:transition-transform after:duration-300",
+            "group-hover:after:scale-x-100",
+            // active state: keep underline shown + bold
+            isActive ? "font-semibold after:scale-x-100" : ""
+          ].join(' ')
+        }
+      >
+        {label}
+      </NavLink>
+    )
+  })}
+</nav>
+
       </div>
     </header>
   )
