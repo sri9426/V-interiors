@@ -15,7 +15,8 @@ export default function Navbar() {
           />
           
           {/* Optional: keep brand text next to logo */}
-          <span className="font-semibold text-xl tracking-tight">V Interior's</span>
+          {/* <span className=" hidden md:inline font-semibold text-xl tracking-tight">V Interior's</span> */}
+          <span className="sr-only md:not-sr-only md:inline font-semibold text-xl tracking-tight">V Interior's</span>
         </Link>
 
         <nav className="flex gap-6 text-sm">

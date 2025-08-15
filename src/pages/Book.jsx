@@ -45,11 +45,12 @@ export default function Book() {
   }
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12">
+    <section className="max-w-7xl mx-auto px-4 py-12 ">
       <h1 className="text-3xl font-semibold mb-8">Book a Consultation</h1>
 
       {/* 2-column layout: form left, image right */}
-      <div className="grid gap-20 md:grid-cols-2 items-start">
+      <div className="grid md:grid-cols-2 items-start gap-8 md:gap-12 lg:gap-16">
+
         {/* LEFT: FORM */}
         <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4">
           {/* honeypot (hidden) */}
@@ -76,29 +77,11 @@ export default function Book() {
             {...register('email', { required: true })}
           />
 
-          {/* Preferred date */}
-          <input
+          <div className="grid gap-4 sm:grid-cols-2">
+             {/* NEW: Budget */}
+            <select
             className="border rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500/60"
-            placeholder="Preferred date"
-            type="date"
-            {...register('date', { required: true })}
-          />
-
-          {/* Service */}
-          <select
-            className="border rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500/60"
-            defaultValue="Full service design"
-            {...register('service')}
-          >
-            <option>Full service design</option>
-            <option>Kitchen remodel</option>
-            <option>Bathroom remodel</option>
-            <option>Commercial</option>
-          </select>
-
-          {/* NEW: Budget */}
-          <select
-            className="border rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500/60"
+            
             defaultValue=""
             {...register('budget', { required: true })}
           >
@@ -109,6 +92,18 @@ export default function Book() {
             <option>₹5L – ₹10L</option>
             <option>₹10L+</option>
           </select>
+
+          
+          {/* Preferred date */}
+          <input
+            className="border rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500/60"
+            placeholder="Preferred date"
+            type="date"
+            {...register('date', { required: true })}
+          />
+          </div>
+         
+          
 
           {/* NEW: Apartment / Individual Name */}
           <input
@@ -124,6 +119,7 @@ export default function Book() {
             {...register('location', { required: true })}
           />
 
+        <div className="grid gap-4 sm:grid-cols-2">
           {/* NEW: Apartment size (sq ft) */}
           <input
             className="border rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500/60"
@@ -132,6 +128,20 @@ export default function Book() {
             min="0"
             {...register('apartmentSize')}
           />
+
+          {/* Service */}
+          <select
+            className="border rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500/60"
+            defaultValue="Full service design"
+            {...register('service')}
+          >
+            <option>Full service design</option>
+            <option>Kitchen remodel</option>
+            <option>Bathroom remodel</option>
+            <option>Commercial</option>
+          </select> 
+        </div>
+          
 
           {/* Notes */}
           <textarea
@@ -154,13 +164,27 @@ export default function Book() {
         </form>
 
         {/* RIGHT: IMAGE */}
-        <div className="relative">
+        {/* <div className="relative">
           <img
-            src="/images/Vlogo.jpg"     /* place an image at public/images/Vlogo.jpg */
+            src="/images/Vlogo.jpg"     
             alt="Consultation booking"
            className="w-full h-56 sm:h-72 md:h-96 lg:h-[32rem] object-cover object-top rounded-2xl "
           />
-        </div>
+        </div> */}
+
+        {/* RIGHT: IMAGE */}
+{/* RIGHT: IMAGE */}
+{/* <div className="relative mt-12 md:mt-0 md:pl-16 lg:pl-24"> */}
+  <div className="relative hidden md:block md:pl-16 lg:pl-24">
+  
+  <img
+    src="/images/Vlogo.jpg"
+    alt="Consultation booking"
+    className="w-full h-56 sm:h-72 md:h-96 lg:h-[32rem] object-cover object-top rounded-2xl"
+  />
+</div>
+
+
       </div>
     </section>
   )
